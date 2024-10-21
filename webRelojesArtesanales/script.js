@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         startAutoSlide();
     });
 
-    // Agregar eventos para los indicadores
+    
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
             stopAutoSlide();
@@ -83,10 +83,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const inicioLink = document.getElementById('inicio-link');
     
         inicioLink.addEventListener('click', (event) => {
-            event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+            event.preventDefault(); 
             
-            // Reiniciar la página
-            window.location.href = window.location.pathname; // Recargar la página actual
+       
+            window.location.href = window.location.pathname; 
         });
     });
     window.onload = function() {
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
 
-    // Acordeón
+ 
     const headers = document.querySelectorAll('.accordion-header');
     if (headers.length > 0) {
         headers.forEach(header => {
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Referencias a los elementos del formulario
+    
     const contactForm = document.getElementById('contactForm');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');

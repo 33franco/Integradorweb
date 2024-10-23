@@ -9,7 +9,7 @@ body {
 /* Encabezado */
 header {
     background-color: #ffffff; /* Color principal */
-    color: white;
+    color: rgb(61, 59, 59);
     padding: 16px;
 }
 
@@ -24,22 +24,27 @@ nav ul li {
 }
 
 nav a {
-    color: white;
+    color: rgb(61, 59, 59);
     text-decoration: none;
 }
 
 /* Banner Principal */
-.banner {
-    position: relative;
-    text-align: center;
-    color: rgb(146, 238, 154);
+.logo-container {
+    display: flex;
+align-items: center;
+flex-wrap: wrap;
 }
 
-.banner img {
-    width: 100%;
-    height: 20%;
+.logo {
+    width: 100px;
+    max-width: 20%;
+    height: auto;
+    margin-right: 20px;
 }
-
+h2 {
+    font-size: 2rem; /* Tamaño del texto del título */
+    flex: 1; /* Permite que el título se ajuste al espacio disponible */
+}
 /* Botones */
 .btn {
     background-color: #6200ea; /* Color del botón */
@@ -82,4 +87,20 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        justify-content: center; 
+    }
+    
+    .logo {
+        max-width: 50%; 
+    }
+    
+    h2 {
+        font-size: 1.5rem; 
+        text-align: center; 
+        margin-top: 10px; 
+    }
 }

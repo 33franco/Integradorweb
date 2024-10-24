@@ -83,6 +83,56 @@ footer {
     text-align: center;
     padding: 20px;
 }
+/* Carrusel */
+.carousel {
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    height: 400px; /* Ajustar la altura del contenedor del carrusel */
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* Descripción de las imagenes del Carrusel */
+.carousel-description {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
 
 
 
@@ -95,7 +145,7 @@ footer {
     
        
     .logo {
-        max-width: 50%; 
+        max-width: 80%; 
     }
     
     h2 {

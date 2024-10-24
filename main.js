@@ -48,3 +48,49 @@ setInterval(() => {
     updateCarousel();
 }, 15000);
 
+document.getElementById('testimonio-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const testimonio = document.getElementById('testimonio').value.trim();
+
+    const nameError = document.getElementById('name-error');
+    const emailError = document.getElementById('email-error');
+    const testimonioError = document.getElementById('testimonio-error');
+
+    let valid = true;
+
+    // Limpiar mensajes de error previos
+    nameError.textContent = '';
+    emailError.textContent = '';
+    testimonioError.textContent = '';
+
+    if (name.length === 0 || name.length > 50) {
+        valid = false;
+        nameError.textContent = 'El nombre es obligatorio y no debe exceder los 50 caracteres.';
+        nameError.style.display = 'block';
+    }
+
+    if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(email)) {
+        valid = false;
+        emailError.textContent = 'El correo electrónico no es válido.';
+        emailError.style.display = 'block';
+    }
+
+    if (testimonio.length === 0 || testimonio.length > 500) {
+        valid = false;
+        testimonioError.textContent = 'El testimonio es obligatorio y no debe exceder los 500 caracteres.';
+        testimonioError.style.display = 'block';
+    }
+
+    if (valid) {
+        const listaTestimonios = document.getElementById('lista-testimonios');
+        const nuevoTestimonio = document.createElement('blockquote');
+        nuevoTestimonio.innerHTML = `<strong>${name}:</strong> ${testimonio}`;
+        listaTestimonios.appendChild(nuevoTestimonio);
+
+        // Limpiar el formulario
+        document.getElementById('testimonio-form').reset();
+    }
+});

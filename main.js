@@ -46,4 +46,5 @@ updateCarousel();
 setInterval(() => {
     currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
     updateCarousel();
-}, 10000);
+}, 15000);
+

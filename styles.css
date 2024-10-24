@@ -4,17 +4,27 @@
 }
 body {
     margin: 0;
-    padding: 1rem;
+    padding: 2rem;
     background-color: #f5f5f5; /* Color de fondo claro */
 }
 
-/* Encabezado */
+/* Encabezado header*/
 header{
     display: flex;
     justify-content: space-between;
     padding: 2rem;
     align-items: center;
 }
+#introduccion{
+    justify-content: space-around;
+    margin-top: 20px;
+    background-color: white; /* Fondo blanco para tarjetas */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    padding: 20px;
+    width: 90%;
+}
+
 .nav-list{
     list-style-type: none;
     display: flex;
@@ -40,6 +50,36 @@ h3{
 .abrir-menu , .cerrar-menu{
     display: none;
 }
+/*Curiosidades*/
+#curiosidades {
+    max-width: 800px; /* Ancho máximo para la sección */
+    margin: 20px auto; /* Centrado horizontal y margen superior/inferior */
+    padding: 20px; /* Espaciado interno */
+    background-color: #ffffff; /* Fondo blanco para la sección */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+h3 {
+    font-size: 24px; /* Tamaño del encabezado */
+    color: #333; /* Color del texto */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+p {
+    font-size: 18px; /* Tamaño del texto */
+    line-height: 1.7; /* Espaciado entre líneas */
+    color: #555; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado inferior entre párrafos */
+}
+h4{
+    border-left: 5px solid #6200ea;
+    font-size: 18px; /* Tamaño del texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #4a4949; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado inferior entre párrafos */
+}
+
 /* Botones */
 .btn {
     background-color: #6200ea; /* Color del botón */
@@ -58,7 +98,9 @@ h3{
 /* Sección de Destacados */
 #destacados {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-between;
+    flex-wrap: wrap;
+
     margin-top: 20px;
 }
 
@@ -67,7 +109,7 @@ h3{
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
     padding: 20px;
-    width: 30%; /* Ancho de las tarjetas */
+    width: 40%; /* Ancho de las tarjetas */
 }
 
 /* Testimonios */
@@ -78,10 +120,11 @@ blockquote {
 
 /* Pie de Página */
 footer {
-    background-color: #333; /* Color oscuro para el pie de página */
-    color: white;
+    background-color: #ab6fff; /* Color oscuro para el pie de página */
     text-align: center;
     padding: 20px;
+    font-size: 2vw;
+
 }
 /* Carrusel */
 .carousel {
@@ -91,6 +134,7 @@ footer {
     max-width: 600px;
     margin: auto;
     overflow: hidden;
+    padding-top: 16px;
 }
 
 .carousel-images {
@@ -133,6 +177,8 @@ footer {
     font-size: 1.2rem;
     color: #333;
 }
+
+
 
 
 

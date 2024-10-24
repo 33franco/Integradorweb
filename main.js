@@ -87,7 +87,7 @@ document.getElementById('testimonio-form').addEventListener('submit', function(e
     if (valid) {
         const listaTestimonios = document.getElementById('lista-testimonios');
         const nuevoTestimonio = document.createElement('blockquote');
-        nuevoTestimonio.innerHTML = `<strong>${name}:</strong> ${testimonio}`;
+        nuevoTestimonio.innerHTML = `${name}: ${testimonio}`;
         listaTestimonios.appendChild(nuevoTestimonio);
 
         // Limpiar el formulario

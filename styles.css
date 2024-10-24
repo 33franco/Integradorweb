@@ -15,14 +15,87 @@ header{
     padding: 2rem;
     align-items: center;
 }
+
+/*introduccion*/
+
+.material-title {
+    font-family: 'Roboto', sans-serif; /* Fuente recomendada por Material Design */
+    font-size: 36px; /* Tamaño de la fuente grande para destacar el título */
+    font-weight: 500; 
+    text-align: center;  
+    color: #333; 
+    margin: 20px 0;  
+    padding: 10px;
+    background-color: #f5f5f5;  
+    border-radius: 8px; /* Borde redondeado para suavizar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);  
+    letter-spacing: 1px;
+}
+/* Carrusel */
+.carousel {
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 16px;
+}
+
+.carousel-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    height: 400px; /* Ajustar la altura del contenedor del carrusel */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* Descripción de las imagenes del Carrusel */
+.carousel-description {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px
+}
 #introduccion{
+    max-width: 900px;
     justify-content: space-around;
     margin-top: 20px;
     background-color: white; /* Fondo blanco para tarjetas */
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin: 20px auto; /* Centrado horizontal y margen superior/inferior */
     padding: 20px;
-    width: 90%;
 }
 
 .nav-list{
@@ -55,6 +128,7 @@ h3{
     max-width: 800px; /* Ancho máximo para la sección */
     margin: 20px auto; /* Centrado horizontal y margen superior/inferior */
     padding: 20px; /* Espaciado interno */
+
     background-color: #ffffff; /* Fondo blanco para la sección */
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
@@ -111,72 +185,6 @@ h4{
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
     padding: 20px;
     width: 40%; /* Ancho de las tarjetas */
-}
-
-
-
-/* Pie de Página */
-footer {
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    border-radius: 8px; /* Bordes redondeados */
-
-}
-/* Carrusel */
-.carousel {
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
-    padding-top: 16px;
-}
-
-.carousel-images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease-in-out;
-    height: 400px; /* Ajustar la altura del contenedor del carrusel */
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    border-radius: 8px; /* Bordes redondeados */
-}
-
-.carousel img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.carousel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-#prev {
-    left: 10px;
-}
-
-#next {
-    right: 10px;
-}
-
-/* Descripción de las imagenes del Carrusel */
-.carousel-description {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #333;
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
 }
 
 /* Formulario de Testimonios */
@@ -297,7 +305,14 @@ footer {
 }
 
 
+/* Pie de Página */
+footer {
+    
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border-radius: 8px; /* Bordes redondeados */
 
+}
 
 @media screen and (max-width: 550px) {
     header {
